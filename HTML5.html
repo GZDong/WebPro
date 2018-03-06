@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="csstest.css" />
+    <style>
+        .cities {
+            background-color:black;
+            color:white;
+            margin:20px;
+            padding:20px;
+        }
+
+        span.inside {color:red;}
+    </style>
+</head>
+<body style="background-color: burlywood" >
+<h1 style="background-color: red;color: whitesmoke;font-size: 30px;text-align: center">这是标题</h1>
+<hr />  <!--hr 分割线-->
+<p style="background-color: green;font-family: 'Baskerville Old Face';">这     是<br/> HTML5</p>  <!--多个空格也只显示一个空格-->
+<br/>
+<a href="HTML4.html" target="_blank" name="mao">h4，使用target指定打开方式，比如_blank在新窗口中打开</a>
+<!--class 规定元素的类名
+    id 指定元素的唯一id
+    style 规定元素的行内样式
+    title 规定元素的额外信息，可在工具提示中显示
+-->
+<p>字体演示：</p>
+<b>加粗字体b</b>
+<strong>加重语气strong</strong>
+<em>倾斜的强调字体em</em>
+<i>斜体字体i</i>
+<small>小字体small</small>
+附带字体下方<sub>下标字sub</sub>
+附带字体上方<sup>上标字sup</sup>
+<br />
+<pre>
+    可以自由编译的预编译pre
+      pre标签
+        适合代码呈现
+</pre>
+<address>
+    地址标签address<br/>
+    自动倾斜
+</address>
+<abbr title="内容隐藏式缩写">鼠标移到这里来，我是内容隐藏式缩写abbr，用title属性指定隐藏内容</abbr>
+<br/>
+<acronym title="首字母缩写">鼠标移到这里来，我是首字母缩写acronym</acronym>
+<p>下面是长引用：</p>
+<blockquote cite="HTML4.html">鲁迅说过，湖人总冠军。其中，blockquote可以使用cite指定引用缩写HTML4，或者充当著作的标题</blockquote>
+<q>这是短引用q，自带双引号</q>
+<p>这是<del>删除线del</del>, 这是<ins>插入线ins</ins> </p>
+<ul>
+    <li>这是无序ul</li>
+    <li>li为子项</li>
+</ul>
+<ol>
+    <li>这是有序列表ol</li>
+    <li>li为子项</li>
+</ol>
+<table
+        border="1"
+cellpadding="5"
+cellspacing="3">
+    <caption>使用caption指定表名</caption>
+    <tr>
+        <th>这是表头th，自动粗体</th>
+        <th colspan="2">也是作为行tr的子标签加入</th>
+    </tr>
+    <tr>
+        <td>这是表中的值cell</td>
+        <td>使用td标签</td>
+        <td>下面的空元素使用& nbsp作为值不会没边框</td>
+    </tr>
+    <tr>
+        <td>没有为table指定border值时默认没有边框</td>
+        <td>使用cellpadding指定内距离，cellspacing指定外距离</td>
+        <td>&nbsp</td>
+    </tr>
+    <tr >
+        <td align="right">使用align为值td指定方向</td>
+        <td align="center">为th指定colspan值为一个横表列显示多行</td>
+        <td>为th指定rowspan值为一个竖表列显示多行</td>
+    </tr>
+</table>
+
+<div class="cities">
+    <h2>London</h2>
+    <p>
+       使用div做块级元素的整合，也就是会有折行，同时可以为这类元素集一起做样式规定。
+        这“类”元素，所以用类class指定它的类名，可以用一个类代表一个元素集，然后
+        在head处做统一的样式规定，或者在css文件里，具体为 .className {}
+    </p>
+</div>
+
+<p>span外。 <span class="inside">span用于行内元素整合，同样用类class指定一类内包的元素属性。但是要用span.className指定。</span> span外的内容</p>
+
+<a href="HTML5_css_test.xhtml" ><p align="center">css相关内容</p></a>
+<p class="head"> head> 元素是所有头部元素的容器。head> 内的元素可包含脚本，指示浏览器在何处可以找到样式表，提供元信息，等等。
+    以下标签都可以添加到 head 部分：title>、base>、link>、meta>、script> 以及 style>。<br/>title 元素在所有 HTML/XHTML 文档中都是必需的</p>
+<pre>
+    base> 标签为页面上的所有链接规定默认地址或默认目标（target）
+    head>
+    base href="http://www.baidu.com/" />
+    base target="_blank" />
+    /head>
+</pre>
+
+<pre>
+     link> 标签定义文档与外部资源之间的关系。
+     link> 标签最常用于连接样式表：
+
+    head>
+    link rel="stylesheet" type="text/css" href="mystyle.css" />
+    /head>
+    style> 标签用于为 HTML 文档定义样式信息。
+    你可以在 style 元素内规定 HTML 元素在浏览器中呈现的样式
+</pre>
+
+<pre>
+    元数据（metadata）是关于数据的信息。
+    meta> 标签提供关于 HTML 文档的元数据。元数据不会显示在页面上，但是对于机器是可读的。
+    典型的情况是，meta 元素被用于规定页面的描述、关键词、文档的作者、最后修改时间以及其他元数据。
+    meta> 标签始终位于 head 元素中。
+    元数据可用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他 web 服务
+
+    meta 元素定义页面的描述：
+    meta name="description" content="Free Web tutorials on HTML, CSS, XML" />
+    meta 元素定义页面的关键词:
+    meta name="keywords" content="HTML, CSS, XML" />
+</pre>
+
+<pre >
+    在 HTML 中不能使用小于号（<）和大于号（>），这是因为浏览器会误认为它们是标签。
+    如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体（character entities）。
+    &entity_name,如需显示小于号，我们必须这样写：&lt
+</pre>
+<pre>
+    统一资源定位器URL：
+    scheme://host.domain:port/path/filename
+    像http，默认主机是www
+</pre>
+<br/>
+
+<p>
+    !DOCTYPE> 声明
+    Web 世界中存在许多不同的文档。只有了解文档的类型，浏览器才能正确地显示文档。
+    HTML 也有多个不同的版本，只有完全明白页面中使用的确切 HTML 版本，浏览器才能完全正确地显示出 HTML 页面。这就是 <!DOCTYPE> 的用处。
+    <!DOCTYPE> 不是 HTML 标签。它为浏览器提供一项信息（声明），即 HTML 是用什么版本编写的。
+</p>
+
+<div>
+    <h2>HTML5 中的语义元素</h2>
+
+    <p>下面列出了以字母顺序排列的 HTML5 新语义元素。</p>
+
+    <p>这些链接指向完整的 HTML 参考手册。</p>
+
+    <table class="dataintable">
+        <tr>
+            <th style="width:30%;">标签</th>
+            <th>描述</th>
+        </tr>
+
+        <tr>
+            <td>&lt;article&gt;</td>
+            <td>定义文章。</td>
+        </tr>
+
+        <tr>
+            <td>&lt;aside&gt;</td>
+            <td>定义页面内容以外的内容。</td>
+        </tr>
+
+        <tr>
+            <td>&lt;details&gt;</td>
+            <td>定义用户能够查看或隐藏的额外细节。</td>
+        </tr>
+
+        <tr>
+            <td>&lt;figcaption&gt;</td>
+            <td>定义 &lt;figure&gt; 元素的标题。</td>
+        </tr>
+
+        <tr>
+            <td>&lt;figure&gt;</td>
+            <td>规定自包含内容，比如图示、图表、照片、代码清单等。</td>
+        </tr>
+
+        <tr>
+            <td>&lt;footer&gt;</td>
+            <td>定义文档或节的页脚。</td>
+        </tr>
+
+        <tr>
+            <td>&lt;header&gt;</td>
+            <td>规定文档或节的页眉。</td>
+        </tr>
+
+        <tr>
+            <td>&lt;main&gt;</td>
+            <td>规定文档的主内容。</td>
+        </tr>
+
+        <tr>
+            <td>&lt;mark&gt;</td>
+            <td>定义重要的或强调的文本。</td>
+        </tr>
+
+        <tr>
+            <td>&lt;nav&gt;</td>
+            <td>定义导航链接。</td>
+        </tr>
+
+        <tr>
+            <td>&lt;section&gt;</td>
+            <td>定义文档中的节。</td>
+        </tr>
+
+        <tr>
+            <td>&lt;summary&gt;</td>
+            <td>定义 &lt;details&gt; 元素的可见标题。</td>
+        </tr>
+
+        <tr>
+            <td>&lt;time&gt;</td>
+            <td>定义日期/时间。</td>
+        </tr>
+    </table>
+</div>
+<p>下面是一块画布，在没有使用js创建画布对象并指定它应该怎么画时，它就是一块空白区域</p>
+<div>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+</div>
+<script type="text/javascript">
+    var c = document.getElementById("myCanvas");
+    var cxt = c.getContext('2d');
+    cxt.fillStyle='#FF0000';
+    cxt.fillRect(0,0,150,75);
+</script>
+<p>SVG:<br/>
+    SVG 指可伸缩矢量图形 (Scalable Vector Graphics)<br/>
+    SVG 用于定义用于网络的基于矢量的图形<br/>
+    SVG 使用 XML 格式定义图形<br/>
+    SVG 图像在放大或改变尺寸的情况下其图形质量不会有损失<br/>
+    SVG 是万维网联盟的标准<br/>
+    SVG 图像可通过文本编辑器来创建和修改<br/>
+    SVG 图像可被搜索、索引、脚本化或压缩<br/>
+    SVG 是可伸缩的<br/>
+    SVG 图像可在任何的分辨率下被高质量地打印<br/>
+    SVG 可在图像质量不下降的情况下被放大<br/>
+ SVG的使用方式为，使用svg标签进行直接植入，如<br/>
+    svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190"><br/>
+    polygon points="100,10 40,180 190,60 10,60 160,180"<br/>
+             style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" /><br/>
+    /svg></p><br/>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+    <polygon points="100,10 40,180 190,60 10,60 160,180"
+             style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+</svg>
+<br/>
+<p>下面使用localStorage对象进行本地储存,可以使用setItem(key,value)储存,用getItem(key)获取</p>
+<button onclick="clickCounter()" type="button">点击会储存</button>
+<div id="result"></div>
+<script>
+    function clickCounter() {
+        if (typeof (Storage)!= 'undefined'){
+            if (localStorage.clickcount){
+                localStorage.clickcount = Number(localStorage.clickcount)+1;
+            }else {
+                localStorage.clickcount = 1;
+            }
+            document.getElementById("result").innerHTML = "您已经点击这个按钮 " + localStorage.clickcount + " 次。";
+        }
+    }
+</script>
+<p>sessionStorage也是一样的，是指它储存的数据会在浏览器关闭时清除</p>
+<a  href="#mao"><p align="center">这里使用name作为锚实现页面内的跳转,也可以使用id，在href里使用#指定锚</p></a>
+</body>
+</html>

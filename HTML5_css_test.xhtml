@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link rel="stylesheet" href="csstest.css" />
+    <title>引进css</title>
+</head>
+<body>
+<div id="header">
+    <h1>City Gallery</h1>
+</div>
+
+<div id="nav">
+    London<br />
+    Paris<br />
+    Tokyo<br />
+</div>
+
+<div id="section">
+    <h1>London</h1>
+    <p>
+        使用id来为div指定块，当id为特定标签元素的名字时，在css里用#idName时，在html里，该块就会变成id指定的标签
+    </p>
+    <pre>
+       效果和下面一样（去掉左括号）：
+          nav>
+            London br>
+            Paris br>
+            Tokyo br>
+          nav>
+
+         section>
+            h1>London /h1>
+             p>
+                使用id来为div指定块，当id为特定标签元素的名字时，在css里用#idName时，在html里，该块就会变成id指定的标签
+             /p>
+             pre>
+                ...
+             /pre>
+         /section>
+
+         footer>
+            底部footer的样式
+         /footer>
+    </pre>
+</div>
+
+<div id="footer">
+    底部footer的样式
+</div>
+
+</body>
+</html>
