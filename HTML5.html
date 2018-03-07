@@ -276,6 +276,46 @@ cellspacing="3">
     }
 </script>
 <p>sessionStorage也是一样的，是指它储存的数据会在浏览器关闭时清除</p>
+<p>创建一个外部js文件，在里面写好方法，使用postMessage方法把信息传给调用者<br/>
+调用方使用new Worker('..js')引用并创建Worker对象，然后对应的使用worker对象的onmessage方法进行回调<br/>
+    w.onmessage = function(event) {<br/>
+    document.getElementById("result").innerHTML = event.data;<br/>
+    };<br/>
+参数会回调到event中</p>
+<p>Count numbers: <output id="result2"></output></p>
+<button onclick="startWorker()">Start Worker</button>
+<button onclick="stopWorker()">Stop Worker</button>
+<br><br>
+
+<script>
+    var w;
+
+    function startWorker() {
+        if(typeof(Worker) !== "undefined") {
+            if(typeof(w) == "undefined") {
+                w = new Worker("jsfileforWorker.js");
+            }
+            w.onmessage = function(event) {
+                document.getElementById("result2").innerHTML = event.data;
+            };
+        } else {
+            document.getElementById("result2").innerHTML = "Sorry! No Web Worker support.";
+        }
+    }
+
+    function stopWorker() {
+        w.terminate();
+        w = undefined;
+    }
+</script>
+
+<p>可以使用Server-sent事件通知来实现与服务器的实时更新，接收服务器的实时推送<br/>
+    var source = new EventSource("demo_sse.php");//规定发送更新的页面的 URL<br/>
+    source.onmessage = function(event) {<br/>
+    document.getElementById("result").innerHTML += event.data;<br/>
+    };
+</p>
+
 <a  href="#mao"><p align="center">这里使用name作为锚实现页面内的跳转,也可以使用id，在href里使用#指定锚</p></a>
 </body>
 </html>
